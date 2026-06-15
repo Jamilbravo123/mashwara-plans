@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mashwara — Plans</title>
+<style>
+  :root{
+    --teal:#0f766e; --teal-d:#0b5650; --teal-l:#e6f3f1; --teal-l2:#f1f8f7;
+    --ink:#13343b; --muted:#5b7178; --line:#dde7e5;
+    --gold:#b9842b; --gold-d:#8f6516; --gold-l:#fbf3e2;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:#eef3f2; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.55; padding:32px 16px;}
+  .doc{max-width:1240px; margin:0 auto; background:#fff; border-radius:16px; box-shadow:0 12px 40px rgba(0,0,0,.12); overflow:hidden;}
+  header{background:linear-gradient(110deg,var(--teal),var(--teal-d)); color:#fff; padding:28px 48px;}
+  header h1{font-size:28px; font-weight:800;}
+  header .sub{font-size:14px; opacity:.9; margin-top:5px;}
+  main{padding:10px 48px 42px;}
+  section{padding:24px 0; border-bottom:1px solid var(--line);}
+  section:last-child{border-bottom:none;}
+  h2{font-size:13px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal); display:flex; align-items:center; gap:10px; margin-bottom:16px;}
+  h2 .n{width:24px; height:24px; border-radius:7px; background:var(--teal); color:#fff; font-size:13px; display:inline-flex; align-items:center; justify-content:center;}
+  .strip{border-radius:11px; padding:13px 18px; display:flex; gap:12px; align-items:center; font-size:13.5px; background:var(--teal-l2); border:1px solid #cfe6e2;}
+  .pill{flex:none; background:var(--teal); color:#fff; border-radius:999px; padding:4px 12px; font-size:10.5px; font-weight:800; letter-spacing:.6px; text-transform:uppercase;}
+  .strip b{color:var(--teal-d);}
+  table.cmp{width:100%; border-collapse:collapse; font-size:14px;}
+  .cmp th,.cmp td{text-align:left; padding:11px 13px; border-bottom:1px solid var(--line);}
+  .cmp thead th{font-size:11px; text-transform:uppercase; letter-spacing:.6px; color:var(--muted);}
+  .cmp thead th.biz{color:var(--teal);}
+  .cmp td.f{font-weight:700; width:30%;}
+  .cmp td.b2c{color:var(--muted); width:35%;}
+  .cmp td.biz{background:var(--teal-l); color:var(--teal-d); font-weight:600; width:35%;}
+  .cmp tbody tr:last-child td{border-bottom:none;}
+  .ladder{display:grid; grid-template-columns:repeat(5,1fr); gap:11px;}
+  .pk{border:1px solid var(--line); border-radius:13px; overflow:hidden; display:flex; flex-direction:column;}
+  .pk .h{padding:12px 14px; border-bottom:1px solid var(--line);}
+  .pk .k{font-size:10px; font-weight:800; letter-spacing:.7px; text-transform:uppercase; color:var(--muted);}
+  .pk .nm{font-size:17px; font-weight:800; margin-top:2px;}
+  .pk .tg{font-size:11px; color:var(--muted); margin-top:6px; min-height:42px; line-height:1.35;}
+  .pk .agentic{display:inline-block; font-size:9px; font-weight:800; letter-spacing:.3px; color:var(--teal); background:var(--teal-l); border:1px solid #cfe6e2; border-radius:999px; padding:2px 8px; margin-top:6px;}
+  .pk .fam{display:inline-block; font-size:9px; font-weight:800; letter-spacing:.3px; color:var(--gold-d); background:var(--gold-l); border:1px solid #f0dcb4; border-radius:999px; padding:2px 8px; margin-top:6px; margin-left:3px;}
+  .pk ul{list-style:none; padding:11px 14px; flex:1; display:flex; flex-direction:column; gap:7px;}
+  .pk .prev{font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.3px;}
+  .pk li{font-size:12.3px; line-height:1.4; padding-left:16px; position:relative;}
+  .pk li:before{content:"+"; position:absolute; left:0; font-weight:800; color:var(--teal);}
+  .pk li.base:before{content:"\2713"; color:var(--muted);}
+  .pk .who{padding:9px 14px; background:#f7faf9; border-top:1px solid var(--line); font-size:10.5px; color:var(--muted);}
+  .pk .who b{color:var(--ink);}
+  /* free B2C card */
+  .pkF{border-color:#cfd8d7;} .pkF .h{background:#f4f6f6;} .pkF li:before{color:var(--muted);}
+  .pk0 .h{background:#f1f8f7;} .pk1 .h{background:var(--teal-l);}
+  .pk2{border-color:#bfe0db;} .pk2 .h{background:#d8efea;}
+  .pk3{border-color:var(--gold);} .pk3 .h{background:var(--gold-l);} .pk3 li:before{color:var(--gold);} .pk3 .k{color:var(--gold-d);}
+  .soon{display:inline-block; font-size:9px; font-weight:800; color:var(--gold-d); background:#fff; border:1px solid var(--gold); border-radius:999px; padding:1px 6px; margin-left:3px;}
+  .bizline{font-size:12.5px; color:var(--gold-d); background:var(--gold-l); border:1px solid #f0dcb4; border-radius:9px; padding:9px 14px; margin-bottom:14px;}
+  .bizline b{color:var(--gold-d);}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header>
+    <h1>Mashwara — Plans</h1>
+    <div class="sub">Free for everyone · pay only for human care · companies cover their staff &amp; families.</div>
+  </header>
+
+  <main>
+    <section>
+      <h2><span class="n">1</span> Personal vs Business</h2>
+      <div class="strip">
+        <span class="pill">Free for everyone</span>
+        <span><b>Unlimited AI health chat</b> in Roman Urdu · keep all your records · personal health insights — <b>always free</b>.</span>
+      </div>
+      <table class="cmp" style="margin-top:16px">
+        <thead><tr><th>&nbsp;</th><th>Personal (B2C)</th><th class="biz">Business (B2B)</th></tr></thead>
+        <tbody>
+          <tr><td class="f">AI chat, records &amp; insights</td><td class="b2c">Free, unlimited</td><td class="biz">Free, unlimited</td></tr>
+          <tr><td class="f">Doctor visits</td><td class="b2c">3 free a year (12 on Digital)</td><td class="biz">12 → unlimited — paid by the company</td></tr>
+          <tr><td class="f">Family</td><td class="b2c">Up to 2 profiles</td><td class="biz">Whole family included</td></tr>
+          <tr><td class="f">Priority &amp; support</td><td class="b2c">Standard</td><td class="biz">Priority + dedicated support</td></tr>
+          <tr><td class="f">Who pays</td><td class="b2c">The user</td><td class="biz">The company, per employee</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span> The plans</h2>
+      <div class="bizline"><b>For companies (B2B):</b> plans are paid per employee and add <b>priority access</b> &amp; dedicated support.</div>
+      <div class="ladder">
+        <div class="pk pkF">
+          <div class="h"><div class="k">Personal</div><div class="nm">Free <span style="font-size:12px; color:var(--muted); font-weight:700">(B2C)</span></div><div class="tg">For individuals — always free.</div></div>
+          <ul>
+            <li class="base"><b>✦ Mashwara Agentic</b> — follows your health</li>
+            <li class="base">Unlimited AI health chat (Roman Urdu)</li>
+            <li class="base">Your records + health insights</li>
+            <li class="base"><b>3 free doctor visits</b> a year</li>
+          </ul>
+          <div class="who"><b>Best for:</b> any individual</div>
+        </div>
+        <div class="pk pk0">
+          <div class="h"><div class="k">Plan 1</div><div class="nm">Digital</div><div class="tg">The low-cost everyday plan.</div></div>
+          <ul>
+            <li class="prev">Everything in Free, plus</li>
+            <li><b>12 free doctor visits</b> a year</li>
+            <li><b>Whole family</b> included</li>
+          </ul>
+          <div class="who"><b>Best for:</b> entry · large teams on a budget</div>
+        </div>
+        <div class="pk pk1">
+          <div class="h"><div class="k">Plan 2</div><div class="nm">Care</div><div class="tg">No limits on the doctor.</div></div>
+          <ul>
+            <li class="prev">Everything in Digital, plus</li>
+            <li><b>Unlimited</b> doctor visits</li>
+          </ul>
+          <div class="who"><b>Best for:</b> most companies</div>
+        </div>
+        <div class="pk pk2">
+          <div class="h"><div class="k">Plan 3</div><div class="nm">Care+</div><div class="tg">Insurance &amp; expert second opinions.</div></div>
+          <ul>
+            <li class="prev">Everything in Care, plus</li>
+            <li><b>Health insurance</b> for staff with none</li>
+            <li><b>Foreign second opinion</b> — psychiatry &amp; ENT (Norway)</li>
+          </ul>
+          <div class="who"><b>Best for:</b> teams without insurance</div>
+        </div>
+        <div class="pk pk3">
+          <div class="h"><div class="k">Plan 4</div><div class="nm">Total</div><div class="tg">Complete cover, including cancer.</div></div>
+          <ul>
+            <li class="prev">Everything in Care+, plus</li>
+            <li><b>Super insurance</b></li>
+            <li><b>Cancer Care</b> <span class="soon">SOON</span></li>
+          </ul>
+          <div class="who"><b>Best for:</b> premium / leadership cover</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
