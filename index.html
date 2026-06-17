@@ -47,6 +47,11 @@
   .pk li.base:before{content:"\2713"; color:var(--muted);}
   .pk .who{padding:9px 14px; background:#f7faf9; border-top:1px solid var(--line); font-size:10.5px; color:var(--muted);}
   .pk .who b{color:var(--ink);}
+  .pk .pr{font-size:21px; font-weight:800; color:var(--ink); margin-top:9px; line-height:1.15;}
+  .pk .pr span.u{font-size:11px; font-weight:700; color:var(--muted);}
+  .pk .pr span.ann{display:block; font-size:9.5px; font-weight:700; color:var(--muted); letter-spacing:.3px; margin-top:1px;}
+  .pk .b2b{font-size:10.5px; color:var(--teal-d); margin-bottom:4px;}
+  .pk .b2b b{color:var(--teal-d);}
   /* free B2C card */
   .pkF{border-color:#cfd8d7;} .pkF .h{background:#f4f6f6;} .pkF li:before{color:var(--muted);}
   .pk0 .h{background:#f1f8f7;} .pk1 .h{background:var(--teal-l);}
@@ -61,7 +66,7 @@
 <div class="doc">
   <header>
     <h1>Mashwara — Plans</h1>
-    <div class="sub">Free for everyone · pay only for human care · companies cover their staff &amp; families.</div>
+    <div class="sub">Free AI health companion for everyone · pay for doctors &amp; protection · companies cover employees &amp; families.</div>
   </header>
 
   <main>
@@ -69,13 +74,14 @@
       <h2><span class="n">1</span> Personal vs Business</h2>
       <div class="strip">
         <span class="pill">Free for everyone</span>
-        <span><b>Unlimited AI health chat</b> in Roman Urdu · keep all your records · personal health insights — <b>always free</b>.</span>
+        <span><b>Unlimited AI health chat</b> · keep all your records · personal health insights — <b>always free</b>.</span>
       </div>
       <table class="cmp" style="margin-top:16px">
         <thead><tr><th>&nbsp;</th><th>Personal (B2C)</th><th class="biz">Business (B2B)</th></tr></thead>
         <tbody>
-          <tr><td class="f">AI chat, records &amp; insights</td><td class="b2c">Free, unlimited</td><td class="biz">Free, unlimited</td></tr>
-          <tr><td class="f">Doctor visits</td><td class="b2c">3 free a year (12 on Digital)</td><td class="biz">12 → unlimited — paid by the company</td></tr>
+          <tr><td class="f">AI health chat</td><td class="b2c">Free, unlimited</td><td class="biz">Free, unlimited</td></tr>
+          <tr><td class="f">Health records &amp; insights</td><td class="b2c">Free, unlimited</td><td class="biz">Free, unlimited</td></tr>
+          <tr><td class="f">Doctor visits</td><td class="b2c">3 free a year</td><td class="biz">12 → Priority GP Access — paid by the company</td></tr>
           <tr><td class="f">Family</td><td class="b2c">Up to 2 profiles</td><td class="biz">Whole family included</td></tr>
           <tr><td class="f">Priority &amp; support</td><td class="b2c">Standard</td><td class="biz">Priority + dedicated support</td></tr>
           <tr><td class="f">Who pays</td><td class="b2c">The user</td><td class="biz">The company, per employee</td></tr>
@@ -85,45 +91,46 @@
 
     <section>
       <h2><span class="n">2</span> The plans</h2>
-      <div class="bizline"><b>For companies (B2B):</b> plans are paid per employee and add <b>priority access</b> &amp; dedicated support.</div>
+      <div class="bizline"><b>For companies (B2B):</b> plans are paid per employee per month (PEPM) and add <b>priority access</b> &amp; dedicated support.</div>
       <div class="ladder">
         <div class="pk pkF">
-          <div class="h"><div class="k">Personal</div><div class="nm">Free <span style="font-size:12px; color:var(--muted); font-weight:700">(B2C)</span></div><div class="tg">For individuals — always free.</div></div>
+          <div class="h"><div class="k">Personal</div><div class="nm">Free <span style="font-size:12px; color:var(--muted); font-weight:700">(B2C)</span></div><div class="tg">For individuals — always free.</div><div class="pr">PKR 0</div></div>
           <ul>
             <li class="base"><b>✦ Mashwara Agentic</b> — follows your health</li>
-            <li class="base">Unlimited AI health chat (Roman Urdu)</li>
+            <li class="base">Unlimited AI health chat</li>
             <li class="base">Your records + health insights</li>
             <li class="base"><b>3 free doctor visits</b> a year</li>
+            <li class="base" style="color:var(--muted); font-size:11px;">After included visits: pay per visit or upgrade</li>
           </ul>
           <div class="who"><b>Best for:</b> any individual</div>
         </div>
         <div class="pk pk0">
-          <div class="h"><div class="k">Plan 1</div><div class="nm">Digital</div><div class="tg">The low-cost everyday plan.</div></div>
+          <div class="h"><div class="k">Plan 1</div><div class="nm">Digital</div><div class="tg">The low-cost everyday plan.</div><div class="pr">PKR 399<span class="u"> /mo</span></div></div>
           <ul>
             <li class="prev">Everything in Free, plus</li>
             <li><b>12 free doctor visits</b> a year</li>
             <li><b>Whole family</b> included</li>
           </ul>
-          <div class="who"><b>Best for:</b> entry · large teams on a budget</div>
+          <div class="who"><div class="b2b"><b>B2B:</b> priced per employee — contact us</div><b>Best for:</b> entry · large teams on a budget</div>
         </div>
         <div class="pk pk2">
-          <div class="h"><div class="k">Plan 2</div><div class="nm">Care</div><div class="tg">Unlimited care, insurance &amp; expert second opinions.</div></div>
+          <div class="h"><div class="k">Plan 2</div><div class="nm">Care</div><div class="tg">Priority care, insurance &amp; expert second opinions.</div><div class="pr">PKR 1,199<span class="u"> /mo</span><span class="ann">billed annually</span></div></div>
           <ul>
             <li class="prev">Everything in Digital, plus</li>
-            <li><b>Unlimited</b> doctor visits</li>
-            <li><b>Health insurance</b> for staff with none</li>
+            <li><b>Priority GP Access</b></li>
+            <li><b>Health insurance</b> included</li>
             <li><b>2 foreign second opinions</b> a year — psychiatry &amp; ENT (Norway)</li>
           </ul>
-          <div class="who"><b>Best for:</b> most companies</div>
+          <div class="who"><div class="b2b"><b>B2B:</b> priced per employee — contact us</div><b>Best for:</b> most companies</div>
         </div>
         <div class="pk pk3">
-          <div class="h"><div class="k">Plan 3</div><div class="nm">Total</div><div class="tg">Complete cover, including cancer.</div></div>
+          <div class="h"><div class="k">Plan 3</div><div class="nm">Total</div><div class="tg">Complete cover, including cancer.</div><div class="pr" style="font-size:15px; color:var(--gold-d);">Coming soon<span class="ann">Care members can upgrade at no extra cost at launch</span></div></div>
           <ul>
             <li class="prev">Everything in Care, plus</li>
-            <li><b>Super insurance</b></li>
+            <li><b>Enhanced insurance cover</b></li>
             <li><b>Cancer Care</b> <span class="soon">SOON</span></li>
           </ul>
-          <div class="who"><b>Best for:</b> premium / leadership cover</div>
+          <div class="who"><div class="b2b"><b>B2B:</b> Coming soon</div><b>Best for:</b> premium / leadership cover</div>
         </div>
       </div>
     </section>
