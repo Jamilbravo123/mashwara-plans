@@ -32,7 +32,7 @@
   .cmp td.b2c{color:var(--muted); width:35%;}
   .cmp td.biz{background:var(--teal-l); color:var(--teal-d); font-weight:600; width:35%;}
   .cmp tbody tr:last-child td{border-bottom:none;}
-  .ladder{display:grid; grid-template-columns:repeat(4,1fr); gap:13px;}
+  .ladder{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
   .pk{border:1px solid var(--line); border-radius:13px; overflow:hidden; display:flex; flex-direction:column;}
   .pk .h{padding:12px 14px; border-bottom:1px solid var(--line);}
   .pk .k{font-size:10px; font-weight:800; letter-spacing:.7px; text-transform:uppercase; color:var(--muted);}
@@ -40,11 +40,15 @@
   .pk .tg{font-size:11px; color:var(--muted); margin-top:6px; min-height:42px; line-height:1.35;}
   .pk .agentic{display:inline-block; font-size:9px; font-weight:800; letter-spacing:.3px; color:var(--teal); background:var(--teal-l); border:1px solid #cfe6e2; border-radius:999px; padding:2px 8px; margin-top:6px;}
   .pk .fam{display:inline-block; font-size:9px; font-weight:800; letter-spacing:.3px; color:var(--gold-d); background:var(--gold-l); border:1px solid #f0dcb4; border-radius:999px; padding:2px 8px; margin-top:6px; margin-left:3px;}
-  .pk ul{list-style:none; padding:11px 14px; flex:1; display:flex; flex-direction:column; gap:7px;}
+  .pk ul{list-style:none; padding:13px 15px; flex:1; display:flex; flex-direction:column; gap:9px;}
   .pk .prev{font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.3px;}
-  .pk li{font-size:12.3px; line-height:1.4; padding-left:16px; position:relative;}
+  .pk li{font-size:12.6px; line-height:1.45; padding-left:16px; position:relative;}
   .pk li:before{content:"+"; position:absolute; left:0; font-weight:800; color:var(--teal);}
   .pk li.base:before{content:"\2713"; color:var(--muted);}
+  /* optional insurance add-on box */
+  .pk .addon{margin:0 14px 11px; background:var(--gold-l); border:1px dashed var(--gold); border-radius:9px; padding:8px 10px; font-size:11px; color:var(--gold-d); line-height:1.4;}
+  .pk .addon .lbl{display:block; font-weight:800; text-transform:uppercase; letter-spacing:.45px; font-size:8.5px; margin-bottom:3px; color:var(--gold-d);}
+  .pk .addon b{color:var(--gold-d);}
   .pk .who{padding:9px 14px; background:#f7faf9; border-top:1px solid var(--line); font-size:10.5px; color:var(--muted);}
   .pk .who b{color:var(--ink);}
   .pk .pr{font-size:21px; font-weight:800; color:var(--ink); margin-top:9px; line-height:1.15;}
@@ -60,76 +64,102 @@
   .soon{display:inline-block; font-size:9px; font-weight:800; color:var(--gold-d); background:#fff; border:1px solid var(--gold); border-radius:999px; padding:1px 6px; margin-left:3px;}
   .bizline{font-size:12.5px; color:var(--gold-d); background:var(--gold-l); border:1px solid #f0dcb4; border-radius:9px; padding:9px 14px; margin-bottom:14px;}
   .bizline b{color:var(--gold-d);}
+  .noteline{font-size:12.5px; color:var(--teal-d); background:var(--teal-l2); border:1px solid #cfe6e2; border-radius:9px; padding:9px 14px; margin-bottom:14px;}
+  .noteline b{color:var(--teal-d);}
+  /* B2B pitch hero */
+  .b2bhero .eyebrow{font-size:11px; font-weight:800; letter-spacing:1.3px; text-transform:uppercase; color:var(--teal); margin-bottom:10px;}
+  .b2bhero .bigh{font-size:22px; font-weight:800; line-height:1.32; color:var(--ink); max-width:940px; margin-bottom:20px;}
+  .vgrid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:16px;}
+  .vcard{background:var(--teal-l2); border:1px solid #cfe6e2; border-radius:12px; padding:15px 16px;}
+  .vcard .vt{font-size:13.5px; font-weight:800; color:var(--teal-d); margin-bottom:6px; line-height:1.25;}
+  .vcard p{font-size:12.5px; color:var(--muted); line-height:1.5;}
+  .b2bcta{background:var(--gold-l); border:1px solid #f0dcb4; border-radius:11px; padding:12px 16px; font-size:13px; color:var(--gold-d);}
+  .b2bcta b{color:var(--gold-d);}
+  .b2bcta span{color:var(--muted); display:block; margin-top:2px; font-size:12px;}
+  @media(max-width:760px){ .vgrid{grid-template-columns:repeat(2,1fr);} .ladder{grid-template-columns:repeat(2,1fr);} .b2bhero .bigh{font-size:19px;} }
 </style>
 </head>
 <body>
 <div class="doc">
   <header>
     <h1>Mashwara — Plans</h1>
-    <div class="sub">Free AI health companion for everyone · paid doctor access and protection · companies can cover employees and families.</div>
+    <div class="sub">Free AI health companion for everyone · paid doctor access · add insurance when you want it · companies can cover employees and families.</div>
   </header>
 
   <main>
-    <section>
-      <h2><span class="n">1</span> Personal vs Business</h2>
-      <div class="strip">
-        <span class="pill">Free for everyone</span>
-        <span><b>Unlimited AI health chat</b> · keep all your records · personal health insights — <b>always free</b>.</span>
+    <section class="b2bhero">
+      <div class="eyebrow">For employers</div>
+      <div class="bigh">Give every employee and their family a digital health companion, doctor access and health records — and add insurance only where it's needed.</div>
+      <div class="vgrid">
+        <div class="vcard">
+          <div class="vt">Digital access, day one</div>
+          <p>Unlimited AI health chat, personal records and doctor consultations for every employee and their whole family — working alongside any insurance you already have.</p>
+        </div>
+        <div class="vcard">
+          <div class="vt">Earlier care, fewer sick days</div>
+          <p>Proactive chronic follow-up and early triage keep small problems small. A private employer dashboard shows utilization and engagement.</p>
+        </div>
+        <div class="vcard">
+          <div class="vt">Mental health support, made easier</div>
+          <p>Confidential psychiatry access and international second opinions help employees seek support earlier — the biggest unmet wellbeing need in Pakistani workplaces.</p>
+        </div>
+        <div class="vcard">
+          <div class="vt">Built for the whole family</div>
+          <p>Covers spouse, children and parents, with voice chat in everyday language that reaches low-literacy staff and families too.</p>
+        </div>
       </div>
-      <table class="cmp" style="margin-top:16px">
-        <thead><tr><th>&nbsp;</th><th>Personal (B2C)</th><th class="biz">Business (B2B)</th></tr></thead>
-        <tbody>
-          <tr><td class="f">AI health chat</td><td class="b2c">Free, unlimited</td><td class="biz">Free, unlimited</td></tr>
-          <tr><td class="f">Health records &amp; insights</td><td class="b2c">Free, unlimited</td><td class="biz">Free, unlimited</td></tr>
-          <tr><td class="f">Doctor consultations</td><td class="b2c">3 free a year</td><td class="biz">12 → Priority GP Access — paid by the company</td></tr>
-          <tr><td class="f">Family (Mashwara app)</td><td class="b2c">Up to 2 profiles</td><td class="biz">Whole family on the app</td></tr>
-          <tr><td class="f">Priority &amp; support</td><td class="b2c">Standard</td><td class="biz">Priority + dedicated support</td></tr>
-          <tr><td class="f">Who pays</td><td class="b2c">The user</td><td class="biz">The company, per employee</td></tr>
-        </tbody>
-      </table>
+      <div class="b2bcta"><b>Insurance is optional</b> — add EFU cover only for employees who need it.<span>Plans are priced per employee per month (PEPM) — contact us.</span></div>
     </section>
 
     <section>
-      <h2><span class="n">2</span> The plans</h2>
+      <h2>The plans</h2>
+      <div class="noteline">Plan prices are shown <b>without insurance</b>. Add EFU health insurance to any paid plan as an <b>optional add-on</b>.</div>
       <div class="bizline"><b>For companies (B2B):</b> plans are paid per employee per month (PEPM) and add <b>priority access</b> &amp; dedicated support.</div>
       <div class="ladder">
         <div class="pk pkF">
           <div class="h"><div class="k">Personal</div><div class="nm">Free <span style="font-size:12px; color:var(--muted); font-weight:700">(B2C)</span></div><div class="tg">For individuals — always free.</div><div class="pr">PKR 0</div></div>
           <ul>
-            <li class="base"><b>✦ Mashwara Agentic</b> — follows your health</li>
+            <li class="base"><b>Mashwara Agentic</b> — follows your health</li>
             <li class="base">Unlimited AI health chat</li>
             <li class="base">Your records + health insights</li>
             <li class="base"><b>3 free doctor consultations</b> a year</li>
+            <li class="base"><b>Up to 2 family profiles</b> on the Mashwara app</li>
             <li class="base" style="color:var(--muted); font-size:11px;">After included consultations: pay per consultation or upgrade</li>
           </ul>
           <div class="who"><b>Best for:</b> any individual</div>
         </div>
         <div class="pk pk0">
-          <div class="h"><div class="k">Plan 1</div><div class="nm">Digital</div><div class="tg">The low-cost everyday plan.</div><div class="pr">PKR 399<span class="u"> /mo</span></div></div>
+          <div class="h"><div class="k">Plan 1</div><div class="nm">Digital</div><div class="tg">The low-cost everyday plan.</div><div class="pr">PKR 399<span class="u"> /mo</span><span class="ann">price shown without insurance</span></div></div>
           <ul>
             <li class="prev">Everything in Free, plus</li>
             <li><b>12 free doctor consultations</b> a year</li>
-            <li><b>Whole family</b> on the Mashwara app</li>
+            <li><b>Whole family</b> included</li>
+            <li><b>10% off</b> specialist consultations <span style="color:var(--muted)">(Book a Professional)</span></li>
           </ul>
+          <div class="addon"><span class="lbl">Optional add-on</span><b>Health insurance</b> — from <b>PKR 292/mo</b> <span style="opacity:.8">per covered person</span><br>EFU My Health Gold · PKR 50,000 cover · billed annually (PKR 3,500/yr)</div>
           <div class="who"><div class="b2b"><b>B2B:</b> priced per employee — contact us</div><b>Best for:</b> entry · large teams on a budget</div>
         </div>
         <div class="pk pk2">
-          <div class="h"><div class="k">Plan 2</div><div class="nm">Care</div><div class="tg">Priority care, insurance &amp; expert second opinions.</div><div class="pr">PKR 1,199<span class="u"> /mo</span><span class="ann">billed annually</span></div></div>
+          <div class="h"><div class="k">Plan 2</div><div class="nm">Care</div><div class="tg">Priority doctor access, smarter insights &amp; expert second opinions — insurance optional.</div><div class="pr">PKR 599<span class="u"> /mo</span><span class="ann">billed annually · price shown without insurance</span></div></div>
           <ul>
             <li class="prev">Everything in Digital, plus</li>
-            <li><b>Priority GP Access</b></li>
-            <li><b>Health insurance</b> included for the member <span style="color:var(--gold-d); font-weight:700;">— value PKR 7,500/yr</span></li>
-            <li><b>2 foreign second opinions</b> a year — psychiatry &amp; ENT (Norway)</li>
+            <li><b>Priority GP access</b> included</li>
+            <li><b>Smarter health insights</b> from your records</li>
+            <li><b>2 international second opinions</b> a year — psychiatry &amp; ENT (Norway)</li>
+            <li><b>15% off</b> specialist consultations <span style="color:var(--muted)">(Book a Professional)</span></li>
           </ul>
+          <div class="addon"><span class="lbl">Optional add-on</span><b>Health insurance</b> — <b>PKR 625/mo</b> <span style="opacity:.8">per covered person</span><br>EFU My Health Platinum · PKR 100,000 cover, private room, day-care surgeries · billed annually (PKR 7,500/yr)</div>
           <div class="who"><div class="b2b"><b>B2B:</b> priced per employee — contact us</div><b>Best for:</b> most companies</div>
         </div>
         <div class="pk pk3">
-          <div class="h"><div class="k">Plan 3</div><div class="nm">Total</div><div class="tg">Complete cover, including cancer.</div><div class="pr" style="font-size:15px; color:var(--gold-d);">Coming soon<span class="ann">Care members get priority upgrade access at launch</span></div></div>
+          <div class="h"><div class="k">Plan 3</div><div class="nm">Total</div><div class="tg">Enhanced protection, including cancer care.</div><div class="pr" style="font-size:15px; color:var(--gold-d);">Coming soon<span class="ann">Care members get priority upgrade access at launch</span></div></div>
           <ul>
             <li class="prev">Everything in Care, plus</li>
             <li><b>Enhanced insurance cover</b></li>
+            <li><b>20% off</b> specialist consultations <span style="color:var(--muted)">(Book a Professional)</span></li>
             <li><b>Cancer Care</b> <span class="soon">SOON</span></li>
           </ul>
+          <div class="addon"><span class="lbl">Insurance add-on</span><b>EFU Super Health Gold</b> — <b>PKR 1,029/mo</b> <span style="opacity:.8">per covered person</span><br>PKR 250,000 cover · maternity · pre-existing ramp · billed annually (PKR 12,350/yr)</div>
           <div class="who"><div class="b2b"><b>B2B:</b> Coming soon</div><b>Best for:</b> premium / leadership cover</div>
         </div>
       </div>
